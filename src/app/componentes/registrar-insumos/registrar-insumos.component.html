@@ -1,1 +1,23 @@
+<form>
 
+  <div>
+    <label>Identificador</label><select name="suministro" [(ngModel)]="insumo.identificadorins"
+      >
+      <option *ngFor="let contrato of contratos">{{contrato.identificador}}</option>
+    </select>
+
+  </div>
+  <div>
+    <label>Descripcion del producto:</label>
+
+    <input type="text" name="descripcion" [(ngModel)]="insumo.descripcion" >
+  </div>
+  <div>
+    <label>Valor del insumo:</label>
+    <input type="number" name="valor" [(ngModel)]="insumo.valorins">
+    <button type="button" (click)="ad()">borrar todos los datos</button>
+  </div>
+  <div>
+    <button type="button" (click)="add()">Registrar</button>
+  </div>
+</form>

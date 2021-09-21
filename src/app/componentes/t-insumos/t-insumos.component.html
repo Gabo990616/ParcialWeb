@@ -1,1 +1,17 @@
-<p>t-insumos works!</p>
+<table class="table table-striped" *ngIf='insumos && insumos.length'>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Identificador</th>
+      <th scope="col">Suministro</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let insumo of insumos; index as i ">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ insumo.identificadorins }} </td>
+      <td>{{ insumo.descripcion }}</td>
+      <td>{{ insumo.valorins }}</td>
+  </tbody>
+</table>

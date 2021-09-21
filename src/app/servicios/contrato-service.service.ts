@@ -11,13 +11,13 @@ export class ContratoServiceService {
       contratos = this.get();
     }
     contratos.push(contrato);
-    localStorage.setItem('datos', JSON.stringify(contratos));
+    localStorage.setItem('contrato', JSON.stringify(contratos));
   }
   get(): Contrato[] {
-    return JSON.parse(localStorage.getItem('datos') || '[]');
+    return JSON.parse(localStorage.getItem('contrato') || '[]');
   }
   clear() {
-    localStorage.clear();
+    localStorage.removeItem('contrato');
   }
   constructor() {}
 }
