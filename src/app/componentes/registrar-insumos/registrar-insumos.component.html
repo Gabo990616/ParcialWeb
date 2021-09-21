@@ -1,0 +1,25 @@
+<form>
+
+  <div>
+    <label>Identificador</label>
+    <label>{{contrato.identificador}}</label>
+  </div>
+  <div>
+    <label>Tipo de suministro:</label>
+
+    <select name="tipo" [(ngModel)]="insumo.tipo">
+      <option>Equipo</option>
+      <option>Producto de aseo</option>
+      <option>Papeleria</option>
+    </select>
+  </div>
+  <div>
+    <label>Valor del contrato:</label>
+    <input type="number" name="valor" [(ngModel)]="insumo.valor">
+  </div>
+  <div>
+    <button type="button" (click)="add()">Registrar</button>
+    <button type="reset">Cancelar</button>
+  </div>
+</form>
+<p></p>
